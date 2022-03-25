@@ -17,6 +17,7 @@ Write JavaScript below that logs:
 */
 const allElementP = document.querySelectorAll('p');
 
+
 const siteHeader = document.querySelector('.site-header');
 
 const jumbotronText = document.querySelector('#jumbotron-text');
@@ -93,7 +94,7 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 
-const changeColorButton = document.querySelector('#bgrChangeBtn');
+const changeColorButtonAgain = document.querySelector('#bgrChangeBtn');
 
 let index = 0;
 
@@ -104,4 +105,4 @@ const colorChange = (event) => {
     index++;
 }
 
-changeColorButton.addEventListener("click", colorChange);
+changeColorButtonAgain.addEventListener("click", colorChange);
