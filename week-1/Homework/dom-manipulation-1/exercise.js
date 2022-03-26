@@ -16,13 +16,16 @@ Write JavaScript below that logs:
 
 */
 const allElementP = document.querySelectorAll('p');
-
+console.log(allElementP[0,5]);
 
 const siteHeader = document.querySelector('.site-header');
+console.log(siteHeader);
 
 const jumbotronText = document.querySelector('#jumbotron-text');
+console.log(jumbotronText);
 
 const primaryContent = document.querySelectorAll('.primary-content');
+console.log(primaryContent);
 
 /*
 Task 2
@@ -75,6 +78,20 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 
+const largerLinksButton = document.querySelector('#largerLinksBtn');
+const allLinks = document.getElementsByClassName('nav-link');
+
+console.log(largerLinksButton);
+console.log("allLinks", allLinks);
+
+largerLinksButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    [...allLinks].forEach((link) => {
+    link.style.fontSize = "20px";
+})
+});
+
+
 
 /*
 Task 6
@@ -102,7 +119,11 @@ const colorChange = (event) => {
     const colors = ['pink', 'green', 'blue', 'purple', 'orange'];
     event.preventDefault();
     document.body.style.backgroundColor = colors[index];
+    if(index === 4) {
+        index = 0;
+    } else {
     index++;
-}
+    };
+};
 
 changeColorButtonAgain.addEventListener("click", colorChange);
