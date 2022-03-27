@@ -53,19 +53,34 @@ greenButton.addEventListener("click", (event) => {
 });
 
 // homework part 2
+// STEP 1 Selecting DOM elements
+const selectForm = document.querySelector("form");
+const selectSubmitButton = document.querySelector("form button");
+const inputEmail = document.querySelector("#exampleInputEmail1");
+const inputName = document.querySelector("#example-text-input");
+const describeYourselfArea = document.querySelector("#exampleTextarea");
 
-// const submitButton = document.querySelector('button[type=submit]');
+// STEP 2 Creating Event Handler
+function onSubmit(e) {
+  {
+    e.preventDefault();
+    if (
+      inputEmail.value.trim().length === 0 ||
+      inputEmail.value.trim().includes("@") === false
+    ) {
+      inputEmail.style.backgroundColor = "red";
+    } else if (inputName.value.trim().length === 0) {
+      inputName.style.backgroundColor = "red";
+    } else if (describeYourselfArea.value.trim().length === 0) {
+      describeYourselfArea.style.backgroundColor = "red";
+    } else {
+      alert("Thank you for filling out the form");
+      inputEmail.value = "";
+      inputName.value = "";
+      describeYourselfArea.value = "";
+    }
+  }
+}
 
-// const formFields = document.getElementsByClassName("form-group");
-
-// function required () {
-//     var empt = document.forms["#exampleInputEmail1"]["#example-text-input"]["#exampleTextarea"].value;
-//     if (empt.length < 0) {
-//         formFields.style.backgroundColor = "red";
-//         return invalid;
-//         }
-//     } else {
-//         alert('Thank you for filling out the form');
-//         return valid;
-//     }
-// }
+/// Adding event listener
+selectSubmitButton.addEventListener("click", onSubmit);
