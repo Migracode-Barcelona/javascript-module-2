@@ -18,17 +18,18 @@ Write JavaScript below that logs:
 const allElementP = document.querySelectorAll('p');
 console.log(allElementP[0,5]);
 
-const siteHeader = document.querySelector('.site-header');
-console.log(siteHeader);
+const firstDiv = document.querySelector('.site-header');
+console.log(firstDiv);
 
-const jumbotronText = document.querySelector('#jumbotron-text');
-console.log(jumbotronText);
+const jumbotronElement = document.querySelector('#jumbotron-text');
+console.log(jumbotronElement);
 
-const primaryContent = document.querySelectorAll('.primary-content');
-console.log(primaryContent);
+const primaryContent = document.querySelector('.primary-content');
+const primaryAll = primaryContent.querySelectorAll("p");
+console.log(primaryAll);
 
-/*
-Task 2
+
+/*Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
@@ -54,7 +55,7 @@ function changeColor (color) {
 
 changeColorButton.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(changeColor("yellow"));
+    console.log(changeColor("beige"));
 });
 
 /*
@@ -65,11 +66,15 @@ When a user clicks the ‘Add some text’ button, a new paragraph should be add
 */
 
 const addTextButton = document.querySelector('#addTextBtn');
+const mainArticles = document.querySelector("#mainArticles");
 
 addTextButton.addEventListener("click", (event) => {
     event.preventDefault();
-    addTextButton.innerText = "LEARN MORE";
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Here a new paragraph";
+    mainArticles.appendChild(newParagraph);
 });
+
 
 /*
 Task 5
@@ -87,10 +92,9 @@ console.log("allLinks", allLinks);
 largerLinksButton.addEventListener("click", (event) => {
     event.preventDefault();
     [...allLinks].forEach((link) => {
-    link.style.fontSize = "20px";
+    link.style.fontSize = "25px";
 })
 });
-
 
 
 /*
@@ -101,6 +105,18 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
+const addArticleButton = document.querySelector("#addArticleBtn");
+const selectInput = document.querySelector("input");
+
+addArticleButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const newParagraphAdd = document.createElement("p");
+    newParagraphAdd.textContent = selectInput.value;
+    mainArticles.appendChild(newParagraphAdd);
+    selectInput.value = "";
+});
+
 
 /*
 Task 7
