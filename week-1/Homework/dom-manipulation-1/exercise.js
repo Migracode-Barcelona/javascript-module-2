@@ -16,12 +16,12 @@ Write JavaScript below that logs:
 
 */
 const allElementP = document.querySelectorAll('p');
-console.log(allElementP[0,5]);
+console.log(allElementP);
 
 const firstDiv = document.querySelector('.site-header');
 console.log(firstDiv);
 
-const jumbotronElement = document.querySelector('#jumbotron-text');
+const jumbotronElement = document.getElementById('jumbotron-text');
 console.log(jumbotronElement);
 
 const primaryContent = document.querySelector('.primary-content');
@@ -34,7 +34,7 @@ console.log(primaryAll);
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-const alertButton = document.querySelector('#alertBtn');
+const alertButton = document.getElementById('alertBtn');
 
 alertButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -47,7 +47,7 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
-const changeColorButton = document.querySelector('#bgrChangeBtn');
+const changeColorButton = document.getElementById('bgrChangeBtn');
 
 function changeColor (color) {
     document.body.style.background = color;
@@ -65,8 +65,8 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
-const addTextButton = document.querySelector('#addTextBtn');
-const mainArticles = document.querySelector("#mainArticles");
+const addTextButton = document.getElementById('addTextBtn');
+const mainArticles = document.getElementById("mainArticles");
 
 addTextButton.addEventListener("click", (event) => {
     event.preventDefault();
