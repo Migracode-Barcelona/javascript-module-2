@@ -21,11 +21,11 @@ let coffeeMachine = {
     },
     getCoffee: function (coffee) {
       
-      if ( amount ) {
+      if ( this.insertMoney < this.prices ) {
          return coffee
       } else {
         return coffee
-          }
+      }
     },
   };
   
