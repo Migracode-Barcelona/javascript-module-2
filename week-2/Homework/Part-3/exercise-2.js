@@ -7,6 +7,9 @@ Define a method "makeFriend" to add a new friend to her list.
 let person = {
     name: "Alice",
     friends: ["John", "Nina"],
+    makeFriend: function(name) {
+      return this.friends.concat(["Bob"]);
+    }
   };
   
   /*

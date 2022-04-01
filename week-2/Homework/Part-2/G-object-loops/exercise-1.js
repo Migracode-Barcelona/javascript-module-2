@@ -7,7 +7,10 @@ const studentGrades = {
     george: 17,
     abdul: 19,
   };
-  
+
+for (const prop in obj) {
+  if ()
+}  
   // Prints
   // TOM - 20
   // ABDUL - 19

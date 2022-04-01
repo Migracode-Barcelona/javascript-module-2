@@ -16,8 +16,17 @@ let coffeeMachine = {
       flatWhite: 3.0,
     },
     insertedAmount: 0,
-    insertMoney: function (amount) {},
-    getCoffee: function (coffee) {},
+    insertMoney: function (amount) {
+      amount = coffeeMachine.insertedAmount
+    },
+    getCoffee: function (coffee) {
+      
+      if ( amount ) {
+         return coffee
+      } else {
+        return coffee
+          }
+    },
   };
   
   /*

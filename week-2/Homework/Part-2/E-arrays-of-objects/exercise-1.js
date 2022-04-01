@@ -25,11 +25,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let persons = // Complete here
+let persons = [person1, person2, person3]
 
-let personNames = // Complete here
+let personNames = [person1.name, person2.name, person3.name]
 
-let personsYoungerThan28YearsOld = // Complete here
+let personsYoungerThan28YearsOld = [person1, person3]
 
 
 /*

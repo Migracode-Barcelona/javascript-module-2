@@ -15,7 +15,13 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
+  let nameArray = document.createElement('h1');
+  let jobArray = document.createElement('h2');
+  content.appendChild(nameArray);
+  content.appendChild(jobArray);
+};
+
+console.log(exerciseOne());
 
 /**
  *
@@ -25,8 +31,11 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
-}
+  for (var i = 0; i < shopping.length; i++) {
+    console.log(shopping[i]);
+};
+
+
 
 /**
     I'd like to display my three favorite books inside a nice webpage!

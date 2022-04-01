@@ -9,8 +9,13 @@ A person named Alice is defined below.
 let person = {
     name: "Alice",
     age: 25,
+    greet: () => ('Hello'),
+    sayName: function() {
+      return this.name
+    }  
   };
   
+
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */

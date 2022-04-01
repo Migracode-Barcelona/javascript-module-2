@@ -40,13 +40,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = 
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = 
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-
-
+let destinationNamesMoreThan300KmsAwayByTrain = 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
