@@ -19,12 +19,14 @@ let house = {
   WRITE YOUR CODE BELOW
 */
 
-const address = '51 Berkley Road'
-const previousOwners = ["Brian M.", "Fiona S."]
-const currentOwner = {
-  firstName: "Margaret",
-  lastName: "Montgomery"
+house.address = '51 Berkley Road'
+house.previousOwners = ["Brian M.", "Fiona S."]
+house.currentOwner.lastName = "Montgomery"
+
+if (house.keyThatDoesNotExist) {
+  house.keyThatDoesNotExist.lastName = "jkfhsdf";
 }
+
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]

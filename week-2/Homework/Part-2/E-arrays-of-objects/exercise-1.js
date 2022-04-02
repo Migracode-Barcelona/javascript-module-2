@@ -27,9 +27,9 @@ WRITE YOUR CODE BELOW
 
 let persons = [person1, person2, person3]
 
-let personNames = [person1.name, person2.name, person3.name]
+let personNames = persons.map(person => person.name)
 
-let personsYoungerThan28YearsOld = [person1, person3]
+let personsYoungerThan28YearsOld = persons.filter(person => person.age < 28)
 
 
 /*

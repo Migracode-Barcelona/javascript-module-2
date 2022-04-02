@@ -15,13 +15,19 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-  let nameArray = document.createElement('h1');
-  let jobArray = document.createElement('h2');
-  content.appendChild(nameArray);
-  content.appendChild(jobArray);
+  arrayOfPeople.forEach(person => {
+    // console.log(person.name)
+    // console.log(person.job)
+    const nameTitle = document.createElement('h1');
+    const jobTitle = document.createElement('h2');
+    nameTitle.textContent = person.name;
+    jobTitle.textContent = person.job;
+    content.appendChild(nameTitle);
+    content.appendChild(jobTitle);
+  })
 };
 
-console.log(exerciseOne());
+
 
 /**
  *

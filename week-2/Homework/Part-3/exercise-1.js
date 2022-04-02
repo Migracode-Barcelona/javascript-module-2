@@ -34,23 +34,27 @@ let parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
-  const currentOwner1 = kinningParkHouse.currentOwner;
-  return `${currentOwner1.firstName} ${currentOwner1.lastName}`
+  const currentOwner = house.currentOwner;
+  return `${currentOwner.firstName} ${currentOwner.lastName}`
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
-  const currentOwner1 = kinningParkHouse.currentOwner;
-  const currentOwner2 = parkAvenueHouse.currentOwner;
-  return `${currentOwner1.email}, ${currentOwner2.email}`
+  const currentOwner1 = house1.currentOwner;
+  const currentOwner2 = house2.currentOwner;
+  return [currentOwner1.email, currentOwner2.email]
   
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-  const price1 = kinningParkHouse.price;
-  const price2 = parkAvenueHouse.price;
-  return Math.min(price1, price2);
+  const price1 = house1.price;
+  const price2 = house2.price;
+  if (price1 > price2) {
+    return house2.address
+  } else {
+    return house1.address
+  }
   
 }
 

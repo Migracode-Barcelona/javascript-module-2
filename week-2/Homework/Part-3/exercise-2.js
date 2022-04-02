@@ -8,7 +8,8 @@ let person = {
     name: "Alice",
     friends: ["John", "Nina"],
     makeFriend: function(name) {
-      return this.friends.concat(["Bob"]);
+      this.friends.push(name)
+      
     }
   };
   

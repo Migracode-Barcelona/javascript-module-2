@@ -8,7 +8,7 @@ var phone = {
     brand:'iPhone',
     model: 'iPhone X',
     launchYear: 2017,
-    isUnlocked: true
+    "is unlocked": true
 }
 
 var phoneBrand = phone.brand;
