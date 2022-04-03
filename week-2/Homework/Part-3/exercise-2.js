@@ -8,7 +8,7 @@ let person = {
     name: "Alice",
     friends: ["John", "Nina"],
     makeFriend: function(name) {
-      this.friends.push(name)
+      this.friends.push(name);
     }
   };
   

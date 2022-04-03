@@ -84,6 +84,7 @@ function exerciseTwo(shoppingList) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
 function exerciseThree(books) {
   let content = document.querySelector("#content");
   const list = document.createElement('ul');
@@ -107,7 +108,7 @@ function exerciseThree(books) {
     listItem.appendChild(image);
     list.appendChild(listItem);
 
-  }):
+  });
 }
 
 //
