@@ -15,15 +15,31 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+const allElementP = document.querySelectorAll('p');
+console.log(allElementP);
+
+const firstDiv = document.querySelector('.site-header');
+console.log(firstDiv);
+
+const jumbotronElement = document.getElementById('jumbotron-text');
+console.log(jumbotronElement);
+
+const primaryContent = document.querySelector('.primary-content');
+const primaryAll = primaryContent.querySelectorAll("p");
+console.log(primaryAll);
 
 
-/*
-Task 2
+/*Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+const alertButton = document.getElementById('alertBtn');
 
+alertButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    alert("Thanks for visiting Bikes for Refugees!");
+});
 
 /*
 Task 3
@@ -31,7 +47,16 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+const changeColorButton = document.getElementById('bgrChangeBtn');
 
+function changeColor (color) {
+    document.body.style.background = color;
+}
+
+changeColorButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log(changeColor("beige"));
+});
 
 /*
 Task 4
@@ -40,6 +65,15 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
+const addTextButton = document.getElementById('addTextBtn');
+const mainArticles = document.getElementById("mainArticles");
+
+addTextButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Here a new paragraph";
+    mainArticles.appendChild(newParagraph);
+});
 
 
 /*
@@ -48,6 +82,19 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+const largerLinksButton = document.querySelector('#largerLinksBtn');
+const allLinks = document.getElementsByClassName('nav-link');
+
+console.log(largerLinksButton);
+console.log("allLinks", allLinks);
+
+largerLinksButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    [...allLinks].forEach((link) => {
+    link.style.fontSize = "25px";
+})
+});
 
 
 /*
@@ -59,6 +106,18 @@ When the 'Add' button is clicked, get the text inside the input field and create
 Also clear the text inside the input field
 */
 
+const addArticleButton = document.querySelector("#addArticleBtn");
+const selectInput = document.querySelector("input");
+
+addArticleButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const newParagraphAdd = document.createElement("p");
+    newParagraphAdd.textContent = selectInput.value;
+    mainArticles.appendChild(newParagraphAdd);
+    selectInput.value = "";
+});
+
+
 /*
 Task 7
 ======
@@ -68,3 +127,19 @@ Using the same function in Task 3, every time the 'Change colour' button is clic
 The next color when you are in the last color of the array will be the first color again.
 */
 
+const changeColorButtonAgain = document.querySelector('#bgrChangeBtn');
+
+let index = 0;
+
+const colorChange = (event) => {
+    const colors = ['pink', 'green', 'blue', 'purple', 'orange'];
+    event.preventDefault();
+    document.body.style.backgroundColor = colors[index];
+    if(index === 4) {
+        index = 0;
+    } else {
+    index++;
+    };
+};
+
+changeColorButtonAgain.addEventListener("click", colorChange);

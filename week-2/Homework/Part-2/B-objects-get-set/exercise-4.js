@@ -9,6 +9,8 @@ var dog = {
 
 // WRITE CODE HERE
 
+dog.name = "Rex";
+dog.wantsToPlay = true;
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);

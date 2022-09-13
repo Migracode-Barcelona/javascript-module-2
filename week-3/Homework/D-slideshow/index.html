@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+    <title>CoolestAnimals</title>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +12,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div class="container">
+      <h1>Cool Animals Carousel </h1>
+      <div>
+        <img id="random-image"
+          src="https://images.unsplash.com/photo-1648370004775-7968329bf6b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          alt="Random image"
+        />
+      </div>
+      <div class="button-div">
+        <button id="auto-back-btn"><h3>Auto Back</h3></button>
+        <button id="back-btn"><h3>Back</h3></button>
+        <button id="stop-btn"><h3>Stop</h3></button>
+        <button id="forward-btn"><h3>Forward</h3></button>
+        <button id="auto-forward-btn"><h3>Auto Forward</h3></button>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>

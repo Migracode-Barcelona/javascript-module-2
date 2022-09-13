@@ -1,1 +1,48 @@
-/** Write your CSS in here **/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: sandybrown;
+  }
+
+  div {
+    display: block;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  #random-image {
+    display: block;
+    margin: auto;
+  }
+
+  #show-number {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: bold;
+  }
+
+.button-div {
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+

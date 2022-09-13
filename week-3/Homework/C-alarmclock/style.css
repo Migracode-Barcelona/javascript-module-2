@@ -1,5 +1,6 @@
 .centre {
   position: fixed;
+  text-align: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -8,6 +9,10 @@
 
 #alarmSet {
   margin: 20px;
+}
+
+#stop {
+  background-color: red;
 }
 
 h1 {

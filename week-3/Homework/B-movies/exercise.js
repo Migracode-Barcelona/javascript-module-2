@@ -60,8 +60,45 @@ var movies = [
 
 // create showMovies function
 
+const allMovies = document.querySelector("#all-movies");
+const moviesNumber = document.querySelector("#movies-number");
+
+const showMovies = (movieArray) => {
+  moviesNumber.textContent = movies.length;
+
+  movieArray.forEach((movie) => {
+    const p = document.createElement("p");
+    const boldText = "Dir.";
+    p.textContent = `${movie.title} ${boldText} ${movie.director} \uD83C\uDFAC`;
+    allMovies.appendChild(p);
+  });
+};
 
 // create a new movie object for your favorite movie
 
+const newMovie = {
+  title: "Frances Ha",
+  director: "Noah Baumbach",
+  type: "drama",
+  haveWatched: true,
+};
+
 
 // create addMovies function
+
+const addMovie = (movie) => {
+  console.log(movies);
+  setTimeout(() => {
+    movies.push(movie);
+    console.log(movies);
+    showMovies(movies);
+  }, 2000);
+};
+
+setTimeout(() => {
+  showMovies(movies);
+}, 1000);
+
+setTimeout(() => {
+  addMovie(newMovie);
+}, 2000);

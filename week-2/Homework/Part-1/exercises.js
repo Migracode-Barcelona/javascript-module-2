@@ -12,10 +12,24 @@
  *      <h2>{Job Here}</h2>
  *      .....
  * </div>
+ * 
+ 
  */
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
+  arrayOfPeople.forEach(person => {
+    // console.log(person.name)
+    // console.log(person.job)
+    const nameTitle = document.createElement('h1');
+    const jobTitle = document.createElement('h2');
+    nameTitle.textContent = person.name;
+    jobTitle.textContent = person.job;
+    content.appendChild(nameTitle);
+    content.appendChild(jobTitle);
+  })
+};
+
 
 /**
  *
@@ -24,9 +38,22 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
-  //Write your code in here
+
+
+function exerciseTwo(shoppingList) {
+  let content = document.querySelector("#content");
+  const list = document.createElement("ul");
+
+  content.appendChild(list);
+
+  shoppingList.forEach(shoppingItem => {
+    const listItem = document.createElement("li");
+    listItem.textContent = shoppingItem;
+    list.appendChild(listItem);
+  });
 }
+
+
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -57,8 +84,31 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
 function exerciseThree(books) {
-  //Write your code in here
+  let content = document.querySelector("#content");
+  const list = document.createElement('ul');
+  content.appendChild(list);
+
+  books.forEach(book => {
+    const listItem = document.createElement('li');
+    const paragraph = document.createElement('p');
+    const image = document.createElement("img");
+    
+    image.src = book.url;
+    p.textContent = book.title + " - " + book.author;
+
+    if (book.alreadyRead) {
+      listItems.classList.add("alreadyRead");
+    } else {
+      listItems.classList.add("IHaveNotReadThisBook");
+    }
+
+    listItem.appendChild(paragraph);
+    listItem.appendChild(image);
+    list.appendChild(listItem);
+
+  });
 }
 
 //
@@ -87,17 +137,20 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    url: "https://lawsonblake.com/content/images/2020/12/Design-of-Everyday-Things-1920x1280-min.png"
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    url: "https://lawsonblake.com/content/images/2020/12/Design-of-Everyday-Things-1920x1280-min.png"
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
+    alreadyRead: true,
+    url: "https://lawsonblake.com/content/images/2020/12/Design-of-Everyday-Things-1920x1280-min.png"
   }
 ];
 
