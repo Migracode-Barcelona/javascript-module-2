@@ -16,6 +16,18 @@ Write JavaScript below that logs:
 
 */
 
+//#1
+console.log(document.querySelectorAll('p'))
+
+//#2
+console.log(document.querySelector('div'))
+
+//#3
+console.log(document.querySelector('#jumbotron-text'))
+
+//#4
+console.log(document.querySelectorAll('.primary-content p'))
+
 
 /*
 Task 2
@@ -23,7 +35,10 @@ Task 2
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-
+const alertBtn = document.querySelector('#alertBtn')
+alertBtn.addEventListener('click', (e) => {
+    alert("Thanks for visiting Bikes for Refugees!")
+})
 
 /*
 Task 3
@@ -31,6 +46,10 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+const bgrChangeBtn = document.querySelector('#bgrChangeBtn')
+bgrChangeBtn.addEventListener('click', (e) => {
+    document.querySelector('body').style.backgroundColor = 'purple'
+})
 
 
 /*
@@ -40,7 +59,13 @@ Task 4
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
 
-
+const addTextBtn = document.querySelector('#addTextBtn')
+addTextBtn.addEventListener('click', (e) => {
+    const paragraph = document.createElement('p')
+    const learnMore = document.querySelector('.heading-underline')
+    console.log(learnMore)
+    learnMore.appendChild(paragraph)
+})
 
 /*
 Task 5
@@ -48,6 +73,7 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+const largerLinksBtn = document.querySelector('#largerLinksBtn')
 
 
 /*
