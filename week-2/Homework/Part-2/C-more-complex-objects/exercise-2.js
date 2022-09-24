@@ -27,13 +27,16 @@ let newCurrentOwner = {
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
 // - from the list of previous owners, replace only "John A." with "Stephen B."
 // - give the house a new property called 'isForSale' with the value 'false'
+house['currentOwner'] = newCurrentOwner
+house.previousOwners[1] = 'Stephen B.'
+house['isForSale'] = false
+
 
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 console.log(
-  `Did you correctly assign the new owner using the given variable?","Expected result: true. Actual result: " ${
-    house.currentOwner === newCurrentOwner
+  `Did you correctly assign the new owner using the given variable?","Expected result: true. Actual result: " ${house.currentOwner === newCurrentOwner
   }`
 );
 console.log(

@@ -10,3 +10,7 @@ var kitten = {
 
 // YOUR CODE HERE
 
+const values = Object.values(kitten)
+values.forEach(value => {
+    console.log(value)
+})

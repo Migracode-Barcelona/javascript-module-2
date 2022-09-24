@@ -5,11 +5,12 @@
 */
 
 var phone = {
-    brand:'iPhone,
-    model 'iPhone X'
+    brand: 'iPhone',
+    model: 'iPhone X',
     launchYear: 2017,
-    is Unlocked: true
-;
+    isUnlocked: true,
+}
+    ;
 
 var phoneBrand = phone.bbrand;
 var phoneLaunchYear = phone[launchYear];
