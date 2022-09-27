@@ -124,8 +124,70 @@ mentors.forEach(mentor => {
 
 // 3. Create an object method with the name .addSkill() to be able to add skills from it
 mentors.forEach(mentor => {
-  mentor.addSkill = function addSkill(mentors, newSkill) {
-
+  mentor.addSkill = function addSkill(newSkill) {
+    mentor.skills.push(newSkill)
   }
-
 })
+
+
+
+// 4. Create a function to add a skill to all members in a list of mentors
+
+// function addSkill(mentors,newSkill){
+//   //your code here
+// }
+
+function addSkill(mentors, newSkill) {
+  mentors.forEach(mentor => {
+    mentor.skills.push(newSkill)
+  })
+}
+
+// 5. Create a function to remove a skill to all members in a list of mentors
+
+// function removeSkill(mentors,newSkill){
+//   //your code here
+// }
+
+function removeSkill(mentors, newSkill) {
+  mentors.forEach((mentor) => {
+    let index = mentor.skills.findIndex(skill => skill === newSkill)
+    if (index > -1) {
+      mentor.skills.splice(index, 1)
+    }
+
+  })
+}
+
+// 6. Create a function mentorWithMoreSkills() that returns the name of the mentor with more number of skills
+function mentorWithMoreSkills(mentors) {
+  let maxSkills = 0
+  let indexMentor = 0
+  mentors.forEach((mentor, index) => {
+    if (mentor.skills.length > maxSkills) {
+      maxSkills = mentor.skills.length
+      indexMentor = index
+    }
+
+  })
+  return mentors[indexMentor]
+}
+
+
+
+// 7. Create an object method .addStudentLikes() that increments by one the attribute studentLikes
+
+
+
+
+
+// 8. Create a function that adds a student like to all mentors in the array
+
+function addStudentLikes(mentors) {
+  mentors.forEach(mentor => {
+    mentor.addStudentLikes = function () {
+      mentor.studentLikes = mentor.studentLikes + 1
+    }
+  })
+}
+
