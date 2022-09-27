@@ -3,11 +3,20 @@
 // Try to use both methods shown above to achieve this
 
 const studentGrades = {
-    tom: 20,
-    george: 17,
-    abdul: 19,
-  };
-  
+  tom: 20,
+  george: 17,
+  abdul: 19,
+};
+
+
+const grades = Object.values(studentGrades)
+const names = Object.keys(studentGrades)
+grades.forEach((grade, i) => {
+  if (grade > 18) {
+    console.log(`${names[i].toUpperCase()} - ${grade}`)
+  }
+})
+
   // Prints
   // TOM - 20
   // ABDUL - 19
