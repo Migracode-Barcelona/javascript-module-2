@@ -19,6 +19,32 @@
   <div id="main">
     <div class="jumbotron">
       <h1>My movies</h1>
+      <form id="create-new-movie-form">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Once Upon a Time">
+        </div>
+        <div class="form-group">
+          <label for="title">Director</label>
+          <input type="director" class="form-control" id="director" placeholder="The Cohen Brothers">
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select class="form-control" id="type">
+            <option>sci-fi</option>
+            <option>drama</option>
+            <option>romance</option>
+            <option>documentary</option>
+            <option>action</option>
+          </select>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="haveWatched">
+          <label class="form-check-label" for="haveWatched">Watched</label>
+        </div> <button type="submit" class="btn btn-primary" id="add-movie-btn">Save</button>
+      </form>
+
       <div id="all-movies">
         <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>
