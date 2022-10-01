@@ -93,7 +93,7 @@ addMovie = (newMovie) => {
   setTimeout(() => {
     movies.push(newMovie)
   }, 2000)
-
+  showMovies()
 }
 
 addMovie({
@@ -121,8 +121,8 @@ createMovieForm.addEventListener(('submit'), (e) => {
   const haveWatched = Boolean(createMovieForm.elements['haveWatched'].value)
   const newMovie = { title: title, director: director, type: type, haveWatched: haveWatched }
   addMovie(newMovie)
-
+  showMovies()
 })
 
 
-showMovies()
+
