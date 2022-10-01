@@ -85,7 +85,7 @@ const autoNext = () => {
     setInterval(() => {
         let newIndex = setNextIndex(findIndex())
         showImage(newIndex)
-    }, 1000)
+    }, 10000)
 }
 
 
