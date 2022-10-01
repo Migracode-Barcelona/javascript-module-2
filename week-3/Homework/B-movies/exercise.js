@@ -65,10 +65,11 @@ var movies = [
 
 
 const showMovies = () => {
+  const allMovies = document.querySelector('#all-movies')
+  allMovies.innerHTML = " "
   movies.forEach(movie => {
     let p = document.createElement('p')
     p.innerText = `${movie.title} by ${movie.director}`
-    let allMovies = document.querySelector('#all-movies')
     allMovies.appendChild(p)
   })
 
