@@ -22,8 +22,6 @@ const formatTime = (time) => {
 }
 
 
-
-
 const setAlarm = () => {
   let time = document.querySelector("#alarmSet").value
   const timeRemaining = document.querySelector("#timeRemaining")
