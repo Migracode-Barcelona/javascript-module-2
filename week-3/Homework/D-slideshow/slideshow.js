@@ -7,25 +7,28 @@ const autoNextBtn = document.querySelector("#autoNextBtn")
 
 //fetch image data and create a images array
 let counter = 0
-let apiCallInterval = setInterval(() => {
+const apiCallInterval = setInterval(() => {
     counter = counter + 1
     fetch("https://source.unsplash.com/random")
         .then(r => {
             const imageUrl = r.url
-            console.log(imageUrl)
             images.push(imageUrl)
         })
+    stopApiCall(counter)
 }, 1000)
-if (counter >= 10) {
-    clearInterval(apiCallInterval)
+
+const stopApiCall = (counter) => {
+    if (counter >= 10) {
+        clearInterval(apiCallInterval)
+    }
 }
+
 
 
 let image = document.querySelector('#carousel-image')
 
 const findIndex = () => {
     let currentIndex = images.findIndex((url) => url === image.src)
-    console.log(`currentIndex${currentIndex}`)
     return currentIndex
 
 }
@@ -43,7 +46,7 @@ const setPreviousIndex = (index) => {
     } else {
         index = 0
     }
-    console.log(`newIndex ${index}`)
+
     return index
 }
 
