@@ -71,21 +71,26 @@ nextBtn.addEventListener('click', (e) => {
     showImage(newIndex)
 })
 
+const autoPlayImage = (action) => {
 
+    if (action === 'previous') {
+        showImage(setPreviousIndex(findIndex()))
+    } else {
+        showImage(setNextIndex(findIndex()))
+    }
+
+}
 
 const autoPrevious = () => {
     setInterval(() => {
-
-        let newIndex = setPreviousIndex(findIndex())
-        showImage(newIndex)
+        autoPlayImage('previous')
     }, 1 * 1000)
 }
 
 
 const autoNext = () => {
     setInterval(() => {
-        let newIndex = setNextIndex(findIndex())
-        showImage(newIndex)
+        autoPlayImage('next')
     }, 1 * 1000)
 }
 
