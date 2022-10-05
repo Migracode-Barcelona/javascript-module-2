@@ -78,14 +78,15 @@ const autoPrevious = () => {
 
         let newIndex = setPreviousIndex(findIndex())
         showImage(newIndex)
-    }, 1000)
+    }, 1 * 1000)
 }
+
 
 const autoNext = () => {
     setInterval(() => {
         let newIndex = setNextIndex(findIndex())
         showImage(newIndex)
-    }, 10000)
+    }, 1 * 1000)
 }
 
 
