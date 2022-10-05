@@ -90,7 +90,7 @@ setTimeout(() => {
   showMovies()
 }, 1000);
 
-addMovie = (newMovie) => {
+const addMovie = (newMovie) => {
   setTimeout(() => {
     movies.push(newMovie)
   }, 2000)
@@ -115,7 +115,6 @@ const createMovieForm = document.querySelector("#create-new-movie-form")
 
 createMovieForm.addEventListener(('submit'), (e) => {
   e.preventDefault()
-  const formData = new FormData(e.target);
   const title = createMovieForm.elements['title'].value
   const director = createMovieForm.elements['director'].value
   const type = createMovieForm.elements['type'].value
