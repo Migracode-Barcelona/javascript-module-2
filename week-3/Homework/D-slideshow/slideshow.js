@@ -42,13 +42,11 @@ const showImage = (index) => {
 const setPreviousIndex = (index) => {
     if (index < 10 && index > 0) {
         index = index - 1
-
     } else if (index === 0) {
         index = 9
     } else {
         index = 0
     }
-
     return index
 }
 
@@ -74,10 +72,7 @@ nextBtn.addEventListener('click', (e) => {
 })
 
 
-
-
 const autoPlayImage = (direction) => {
-
     if (direction === 'previous') {
         showImage(setPreviousIndex(findIndex()))
     } else {
@@ -95,11 +90,13 @@ const intervalImage = (direction) => {
 
 
 autoPreviousBtn.addEventListener('click', () => {
+    clearInterval(intervalId)
     intervalImage('previous')
 })
 
 
 autoNextBtn.addEventListener('click', () => {
+    clearInterval(intervalId)
     intervalImage('next')
 })
 
